@@ -32,7 +32,7 @@ $ps_script_list = @(
 $wco = (New-Object System.Net.WebClient)
 
 ForEach ($ps_script in $ps_script_list) {
-	$download_url = "https://git.infotrust.cloud/public-instance/scripts/-/raw/main/Optimize-Windows/resources/$ps_script"
+	$download_url = "https://raw.githubusercontent.com/itc-steve/scripts/main/Optimize-Windows/resources/$ps_script"
 
 	""
 	"--- Downloading $ps_script... ---"
