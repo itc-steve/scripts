@@ -1,0 +1,52 @@
+net stop bits
+net stop wuauserv
+net stop appidsvc
+net stop cryptsvc
+Del "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader\qmgr*.dat"
+Del %windir%\SoftwareDistribution\*.* /S /Q
+Ren %windir%\system32\catroot2 catroot2.bak
+sc.exe sdset bits D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)
+sc.exe sdset wuauserv D:(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;AU)(A;;CCLCSWRPWPDTLOCRRC;;;PU)
+cd /d %windir%\system32
+regsvr32.exe /S atl.dll
+regsvr32.exe /S urlmon.dll
+regsvr32.exe /S mshtml.dll
+regsvr32.exe /S shdocvw.dll
+regsvr32.exe /S browseui.dll
+regsvr32.exe /S jscript.dll
+regsvr32.exe /S vbscript.dll
+regsvr32.exe /S scrrun.dll
+regsvr32.exe /S msxml.dll
+regsvr32.exe /S msxml3.dll
+regsvr32.exe /S msxml6.dll
+regsvr32.exe /S actxprxy.dll
+regsvr32.exe /S softpub.dll
+regsvr32.exe /S wintrust.dll
+regsvr32.exe /S dssenh.dll
+regsvr32.exe /S rsaenh.dll
+regsvr32.exe /S gpkcsp.dll
+regsvr32.exe /S sccbase.dll
+regsvr32.exe /S slbcsp.dll
+regsvr32.exe /S cryptdlg.dll
+regsvr32.exe /S oleaut32.dll
+regsvr32.exe /S ole32.dll
+regsvr32.exe /S shell32.dll
+regsvr32.exe /S initpki.dll
+regsvr32.exe /S wuapi.dll
+regsvr32.exe /S wuaueng.dll
+regsvr32.exe /S wuaueng1.dll
+regsvr32.exe /S wucltui.dll
+regsvr32.exe /S wups.dll
+regsvr32.exe /S wups2.dll
+regsvr32.exe /S wuweb.dll
+regsvr32.exe /S qmgr.dll
+regsvr32.exe /S qmgrprxy.dll
+regsvr32.exe /S wucltux.dll
+regsvr32.exe /S muweb.dll
+regsvr32.exe /S wuwebv.dll
+netsh winsock reset
+netsh winhttp reset proxy
+net start bits
+net start wuauserv
+net start appidsvc
+net start cryptsvc
