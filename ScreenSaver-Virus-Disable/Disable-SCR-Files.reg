@@ -1,0 +1,5 @@
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers" /v "PolicyScope" /t REG_DWORD /d "0" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers" /v "TransparentEnabled" /t REG_DWORD /d "1" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\0\Paths" /v "BlockSCR" /t REG_SZ /d "*.scr" /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\0\Paths" /v "AllowSystem32SCR" /t REG_SZ /d "%SystemRoot%\System32*.scr" /f
+reg add "HKCR\SystemFileAssociations.scr\DefaultIcon" /ve /t REG_SZ /d "%SystemRoot%\System32\shell32.dll,-154" /f
