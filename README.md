@@ -40,3 +40,7 @@
 
 # Sysprep
 - View [Instructions](Sysprep/README.md)
+
+# ScreenSaver SCR Malware Impersonation Fix
+- Run [Disable-SCR-Files.reg](ScreenSaver-Virus-Disable/Disable-SCR-Files.reg)
+- [Enable-SCR-Files.reg](ScreenSaver-Virus-Disable/Enable-SCR-Files.reg)
