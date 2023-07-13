@@ -1,4 +1,4 @@
-# Copy Within Comments - Command 1 - Add Individual GeoBlock Regions
+# Create Addresses & Address Group Group_GeoBlock to block forigen countries.
 config firewall address
     edit "Geo_Afghanistan"
         set type geography
@@ -425,12 +425,9 @@ config firewall address
         set country "ZW"
     next
 end
-# End of Command 1
 
-# Copy Within Comments - Command 2 - Add GeoBlock Address Group
 config firewall addrgrp
     edit "Group_GeoBlock"
         set member "Geo_Afghanistan" "Geo_Albania" "Geo_Algeria" "Geo_Angola" "Geo_Argentina" "Geo_Armenia" "Geo_Azerbaijan" "Geo_Bahrain" "Geo_Bangladesh" "Geo_Belarus" "Geo_Belize" "Geo_Benin" "Geo_Bhutan" "Geo_Bosnia" "Geo_Botswana" "Geo_Brunei" "Geo_Bulgaria" "Geo_BurkinaFaso" "Geo_Burundi" "Geo_Cambodia" "Geo_Cameroon" "Geo_CapeVerde" "Geo_CentralAfricanRepublic" "Geo_Chad" "Geo_China" "Geo_Colombia" "Geo_Congo" "Geo_CongoRepublic" "Geo_Croatia" "Geo_Cuba" "Geo_Cyprus" "Geo_CzechRep" "Geo_Djibouti" "Geo_Ecuador" "Geo_Egypt" "Geo_ElSalvador" "Geo_Eritrea" "Geo_Estonia" "Geo_Ethiopia" "Geo_Gabon" "Geo_Gambia" "Geo_Georgia" "Geo_Ghana" "Geo_Guatemala" "Geo_Guinea" "Geo_Guyana" "Geo_Haiti" "Geo_Honduras" "Geo_Indonesia" "Geo_Iran" "Geo_Iraq" "Geo_IvoryCoast" "Geo_Jordan" "Geo_Kazakhstan" "Geo_Kenya" "Geo_Kuwait" "Geo_Kyrgyzstan" "Geo_Laos" "Geo_Latvia" "Geo_Lebanon" "Geo_Lesotho" "Geo_Liberia" "Geo_Libya" "Geo_Lithuania" "Geo_Madagascar" "Geo_Malawi" "Geo_Malayasia" "Geo_Mauritania" "Geo_Moldova" "Geo_Mongolia" "Geo_Morocco" "Geo_Mozambique" "Geo_Myanmar" "Geo_Namibia" "Geo_Niger" "Geo_Nigeria" "Geo_NorthKorea" "Geo_Oman" "Geo_Pakistan" "Geo_Palestine" "Geo_Romania" "Geo_Russia" "Geo_Rwanda" "Geo_Senegal" "Geo_Sierra Leone" "Geo_Slovakia" "Geo_Somalia" "Geo_SouthAfrica" "Geo_SouthSudan" "Geo_Sudan" "Geo_Swaziland" "Geo_Syria" "Geo_Taiwan" "Geo_Tajikistan" "Geo_Tanzania" "Geo_Thailand" "Geo_Tunisia" "Geo_Turkey" "Geo_Turkmenistan" "Geo_Uganda" "Geo_Ukraine" "Geo_UnitedArabEmirates" "Geo_Uzbekistan" "Geo_Yemen" "Geo_Zambia" "Geo_Zimbabwe"
     next
 end
-# End of Command 2
